@@ -17,14 +17,12 @@ export const render = () => {
   const load = async () => {
     if (app) return;
 
-    const { width, height } = getBounds();
     app = new PIXI.Application({
-      width,
-      height,
       backgroundColor: 0xFFFFFF,
       antialias: true,
       autoDensity: true,
       sharedTicker: true,
+      resizeTo: window,
     });
     app.stage.sortableChildren = true;
     app.stage.eventMode = "static";
@@ -37,33 +35,8 @@ export const render = () => {
 
     document.body.appendChild(app.view);
 
-    resizeView();
-
     await _spritesheet.load();
     _ticker.load();
-  };
-
-  const getBounds = (): Size2d => {
-    return {
-      width: 90,
-      height: 90,
-    };
-  };
-
-  const resizeView = () => {
-    const { devicePixelRatio } = window;
-    const { width, height } = getBounds();
-
-    app.renderer.resolution = SCALE * Math.round(devicePixelRatio);
-    app.renderer._view.resolution = SCALE * Math.round(devicePixelRatio);
-    app.renderer.resize(width, height);
-
-    app.view.style.width = `${Math.round(width * SCALE)}px`;
-    app.view.style.height = `${Math.round(height * SCALE)}px`;
-
-    app.stage.position.set(Math.round(width / 2), Math.round(height / 2));
-
-    System.events.emit(Event.GAME_VIEW_RESIZE, { width, height });
   };
 
   const tickerUpdate = (delta: number) => {
@@ -84,7 +57,6 @@ export const render = () => {
   return {
     load,
     getFPS,
-    getBounds,
     getStage,
     getScale,
 

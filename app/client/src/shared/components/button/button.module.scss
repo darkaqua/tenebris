@@ -1,0 +1,25 @@
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 20px;
+    width: 100%;
+
+    border: 1px solid var(--color-black);
+    border-radius: .4rem;
+    font-size: 1.2rem;
+    font-weight: 400;
+    padding: .2rem .6rem;
+    background-color: var(--color-gray);
+    box-shadow: 2px 2px 1px rgba(0,0,0,.25);
+
+    color: var(--color-light-gray);
+    text-shadow: 2px 2px 1px rgba(0,0,0,.125);
+
+    cursor: pointer;
+
+    .label {
+        cursor: pointer;
+    }
+}

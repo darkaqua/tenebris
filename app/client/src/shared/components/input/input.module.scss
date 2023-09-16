@@ -1,0 +1,19 @@
+.input {
+    height: 20px;
+    width: 100%;
+
+    border: 1px solid var(--color-black);
+    border-radius: .4rem;
+    font-size: 13px;
+    font-weight: 400;
+    padding: .3rem .2rem;
+    background-color: var(--color-light-black);
+    box-shadow: inset 2px 2px 2px rgba(0,0,0,.25);
+
+    color: var(--color-light-gray);
+    text-shadow: 2px 2px 1px rgba(0,0,0,.5);
+
+    &:focus{
+        outline: 0;
+    }
+}

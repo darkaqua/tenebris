@@ -1,0 +1,18 @@
+.container {
+    display: flex;
+    background-color: var(--color-black);
+
+    .item {
+        padding: .5rem;
+
+        &.selected {
+            background-color: var(--color-dark-gray);
+            color: var(--color-white);
+        }
+    }
+    .content {
+        background-color: var(--color-dark-gray);
+        width: 100%;
+        padding: .5rem;
+    }
+}

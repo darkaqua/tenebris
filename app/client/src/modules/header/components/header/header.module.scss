@@ -1,0 +1,14 @@
+.header {
+    width: 100%;
+    height: 40px;
+    -webkit-user-select: none;
+    -webkit-app-region: drag;
+    background-color: var(--color-like);
+
+    padding: 10px;
+
+    .logo {
+        width: 20px;
+        height: 20px;
+    }
+}

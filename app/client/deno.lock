@@ -58,6 +58,9 @@
     "https://deno.land/x/deno_web_serve@v2.7.0/mod.ts": "015a1d1d3ba3d3c13e8198cd31296c52e9c701ad8bd24a626b84dde25dc1b73f",
     "https://deno.land/x/deno_web_serve@v2.7.0/src/serve.ts": "d570616c47b5fe61034657e74f31e3ecb7efbebaa470858e46aae8917b4a385d",
     "https://deno.land/x/deno_web_serve@v2.7.0/src/utils.ts": "986c075cf6b2a02e9abcc8f47e96f97787d877190986a9a5c7a287da5b0e2b4f",
+    "https://deno.land/x/deno_web_serve@v2.8.0/mod.ts": "015a1d1d3ba3d3c13e8198cd31296c52e9c701ad8bd24a626b84dde25dc1b73f",
+    "https://deno.land/x/deno_web_serve@v2.8.0/src/serve.ts": "8fc47c089a01321c7aa2a8cdd06544dc676d261f688209d89211389922054c2f",
+    "https://deno.land/x/deno_web_serve@v2.8.0/src/utils.ts": "273655da57a59cdc2cb57d21b9252d368e954c1c3d2a516d776112fe84314699",
     "https://deno.land/x/is_docker@v2.0.0/mod.ts": "4c8753346f4afbb6c251d7984a609aa84055559cf713fba828939a5d39c95cd0",
     "https://deno.land/x/is_wsl@v1.1.0/mod.ts": "30996b09376652df7a4d495320e918154906ab94325745c1399e13e658dca5da",
     "https://deno.land/x/open@v0.0.6/index.ts": "c7484a7bf2628236f33bbe354520e651811faf1a7cbc3c3f80958ce81b4c42ef"

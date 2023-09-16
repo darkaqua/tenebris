@@ -15,7 +15,7 @@
   },
   "imports": {
     "deno/": "https://deno.land/std@0.201.0/",
-    "deno_web_serve": "../../../../pagoru/deno-web-serve/mod.ts",
-    "deno_web_serve1": "https://deno.land/x/deno_web_serve@v2.7.0/mod.ts"
+    "deno_web_serve1": "../../../../pagoru/deno-web-serve/mod.ts",
+    "deno_web_serve": "https://deno.land/x/deno_web_serve@v2.8.0/mod.ts"
   }
 }

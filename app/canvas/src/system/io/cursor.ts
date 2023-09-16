@@ -23,21 +23,21 @@ export const cursor = (events) => {
       Utils.events.emitNativeEvent(nativeEvent, event)
     );
 
-    events.on(Event.MOUSE_MOVE, (mouseEvent: MouseEvent) => {
-      const { clientX, clientY } = mouseEvent;
-      const scale = System.render.getScale();
-      const { width, height } = System.render.getBounds();
-
-      const absolutePosition: Vector2d = {
-        x: Math.round(clientX / scale),
-        y: Math.round(clientY / scale),
-      };
-
-      cursorRelativePosition = {
-        x: absolutePosition.x - width / 2,
-        y: absolutePosition.y - height / 2,
-      };
-    });
+    // events.on(Event.MOUSE_MOVE, (mouseEvent: MouseEvent) => {
+    //   const { clientX, clientY } = mouseEvent;
+    //   const scale = System.render.getScale();
+    //   const { width, height } = System.render.getBounds();
+    //
+    //   const absolutePosition: Vector2d = {
+    //     x: Math.round(clientX / scale),
+    //     y: Math.round(clientY / scale),
+    //   };
+    //
+    //   cursorRelativePosition = {
+    //     x: absolutePosition.x - width / 2,
+    //     y: absolutePosition.y - height / 2,
+    //   };
+    // });
   };
 
   const getRelativePosition = (): Vector2d => cursorRelativePosition;

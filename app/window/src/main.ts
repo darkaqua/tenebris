@@ -21,20 +21,18 @@ const createWindow = async () => {
 		webPreferences: {
 			preload: MAIN_WINDOW_PRELOAD_WEBPACK_ENTRY,
 		},
+		frame: false,
 		icon: '/assets/icon.png',
 	});
-
+	
 	// and load the index.html of the app.
 	mainWindow.loadURL(
 		isDevelopment() ? 'http://localhost:2023' : MAIN_WINDOW_WEBPACK_ENTRY,
 	);
+	
 	// // Open the DevTools.
 	if (isDevelopment()) mainWindow.webContents.openDevTools();
-
-	mainWindow.on('ready-to-show', async () => {
-		mainWindow.show();
-		mainWindow.maximize();
-	});
+	else mainWindow.maximize();
 };
 
 // This method will be called when Electron has finished

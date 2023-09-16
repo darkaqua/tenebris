@@ -1,0 +1,8 @@
+.container {
+    display: flex;
+    gap: .5rem;
+
+    &.column {
+        flex-direction: column;
+    }
+}
