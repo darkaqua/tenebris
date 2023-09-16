@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "dom.extras",
+      "deno.ns"
+    ],
+    "jsx": "react-jsx"
+  },
+  "tasks": {
+    "fix:types": "deno check main.ts",
+    "build": "deno run -A build.ts ",
+    "start": "deno run -A main.ts "
+  },
+  "imports": {
+    "deno/": "https://deno.land/std@0.201.0/",
+    "deno_web_serve": "../../../../pagoru/deno-web-serve/mod.ts",
+    "deno_web_serve1": "https://deno.land/x/deno_web_serve@v2.7.0/mod.ts"
+  }
+}

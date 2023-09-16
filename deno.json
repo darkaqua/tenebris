@@ -1,0 +1,11 @@
+{
+  "tasks": {
+    "start": "(deno task start:window) & (deno task start:client) & (deno task start:canvas)",
+    "start:window": "cd app/window && yarn run start",
+    "start:client": "cd app/client && deno task start",
+    "start:canvas": "cd app/canvas && deno task start",
+
+    "gource": "gource -s 1 .gource/repo-activity.log --user-image-dir .gource/avatars",
+    "gource:log": "gource --output-custom-log .gource/repo-activity.log"
+  }
+}
