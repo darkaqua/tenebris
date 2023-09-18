@@ -2,7 +2,7 @@ import React from "react";
 import {cn, ComponentIcon, EntityIcon, SystemIcon, TabContainer} from "shared";
 // @ts-ignore
 import css from "./side-panel.module.scss";
-import {CreateComponent} from "modules/side-panel";
+import {CreateComponent, EntityList} from "modules/side-panel";
 
 type Props = {
   className: string
@@ -21,7 +21,7 @@ export const SidePanel: React.FC<Props> = ({ className }) => {
         {
           key: 'entities',
           icon: <EntityIcon className={css.icon} strokeWidth={4}/>,
-          children: <div><EntityIcon strokeWidth={4}/></div>
+          children: <EntityList/>
         },
         {
           key: 'entities',

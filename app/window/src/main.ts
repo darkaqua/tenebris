@@ -1,6 +1,9 @@
+
 const { app, BrowserWindow, ipcMain  } = require('electron');
 const { loadServices } = require('./services.ts');
-const { isDevelopment } = require('./utils.ts');
+const { isDevelopment, getDirectory } = require('./utils.ts');
+const fs = require('fs');
+const path = require('path');
 
 app.commandLine.appendSwitch('force_high_performance_gpu');
 
@@ -39,6 +42,21 @@ const createWindow = async () => {
 	
 	ipcMain.on('minimize', (event, data) => {
 		mainWindow.minimize();
+	})
+	
+	ipcMain.on('minimize', (event, data) => {
+		mainWindow.minimize();
+	})
+	
+	ipcMain.on('write-file', (event, {filePath, data}) => {
+		fs.writeFileSync(path.join(getDirectory(), filePath), data);
+	})
+	
+	ipcMain.on('read-file', (event, filePath) => {
+		fs.readFile(path.join(getDirectory(), filePath), 'utf-8', (err, data) => {
+			if (err) throw err;
+			event.sender.send('read-file', data);
+		});
 	})
 	
 	// and load the index.html of the app.

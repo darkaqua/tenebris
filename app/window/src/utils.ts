@@ -16,7 +16,7 @@ export const getDirectory = () => {
 		default:
 			throw new Error('Unsupported platform!');
 	}
-	return dirname + '/voidpixel';
+	return dirname + '/tenebris';
 };
 
 export const getDenoExecutableName = () =>
