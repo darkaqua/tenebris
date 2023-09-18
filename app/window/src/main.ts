@@ -1,4 +1,4 @@
-const { app, BrowserWindow } = require('electron');
+const { app, BrowserWindow, ipcMain  } = require('electron');
 const { loadServices } = require('./services.ts');
 const { isDevelopment } = require('./utils.ts');
 
@@ -20,10 +20,26 @@ const createWindow = async () => {
 		height: 720,
 		webPreferences: {
 			preload: MAIN_WINDOW_PRELOAD_WEBPACK_ENTRY,
+			nodeIntegration: true,
+			enableRemoteModule: true,
+			contextIsolation: true
 		},
 		frame: false,
 		icon: '/assets/icon.png',
+		
 	});
+	
+	ipcMain.on('close', (event, data) => {
+		app.quit();
+	})
+	
+	ipcMain.on('maximize', (event, data) => {
+		mainWindow.maximize();
+	})
+	
+	ipcMain.on('minimize', (event, data) => {
+		mainWindow.minimize();
+	})
 	
 	// and load the index.html of the app.
 	mainWindow.loadURL(

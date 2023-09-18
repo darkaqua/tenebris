@@ -1,0 +1,2 @@
+
+export * from './cross.component'
